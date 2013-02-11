@@ -1,6 +1,7 @@
+var fs = require('fs');
+var hbs = require('hbs');
 
-var setPartials = function(partialsDir){
-    //var partialsDir = __dirname + '/views/html/partials';
+exports.setPartials = function(partialsDir){
     var filenames = fs.readdirSync(partialsDir);
 
     filenames.forEach(function (filename) {
